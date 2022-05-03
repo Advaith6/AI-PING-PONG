@@ -34,4 +34,29 @@ function gotPoses(results) {
     }
 }
 
+function startGame() {
+    game_status = "start";
+    document.getElementById("status").innerHTML = "Game Is Loading";
+}
+
+function draw() {
+    background(0);
+    image(video, 0, 0, 700, 600);
+
+    fill("black");
+    stroke("black");
+    rect(680, 0, 20, 700);
+
+    fill("black");
+    stroke("black");
+    rect(0, 0, 20, 700);
+
+    if (scoreRightWrist > 0.2) {
+        fill("red");
+        stroke("red");
+        circle(rightWristX, rightWristY, 30);
+    }
+}
+
+
 
